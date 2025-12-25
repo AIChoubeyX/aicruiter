@@ -1,0 +1,7 @@
+/* App styles with Tailwind CSS */
+
+@layer components {
+  .card {
+    @apply rounded-lg border bg-card p-6 shadow;
+  }
+}
