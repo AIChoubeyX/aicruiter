@@ -7,23 +7,23 @@ const Features = () => {
   const [activeTab, setActiveTab] = useState("copilots");
 
   const tabs = [
-    { id: "copilots", label: "Copilots", icon: Monitor },
-    { id: "career", label: "Career Launch Pad", icon: Briefcase },
-    { id: "coding", label: "Coding Copilot", icon: Code },
-    { id: "autojob", label: "Auto Job Apply", icon: Send },
-    { id: "assessment", label: "Online Assessment", icon: FileCheck },
+    { id: "copilots", label: "Real Interview Experience", icon: Monitor },
+    { id: "career", label: "End to end questions", icon: Briefcase },
+    { id: "coding", label: "Real time analysis", icon: Code },
+    // { id: "autojob", label: "Auto Job Apply", icon: Send },
+    // { id: "assessment", label: "Online Assessment", icon: FileCheck },
   ];
 
   const features = [
-    "Personalized Answers",
-    "Detailed Feedbacks and Correction",
-    "Only You Can See",
+    // "Personalized Answers",
+    // "Detailed Feedbacks and Correction",
+    // "Only You Can See",
   ];
 
   return (
     <SectionWrapper id="features" className="bg-card">
       {/* Icon */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -32,7 +32,7 @@ const Features = () => {
         <div className="w-16 h-16 rounded-2xl bg-secondary border border-border flex items-center justify-center">
           <Monitor className="w-8 h-8 text-foreground" />
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Title */}
       <motion.h2
@@ -77,12 +77,12 @@ const Features = () => {
       >
         {/* Main Feature Card */}
         <div className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-card">
-          {/* Header bar */}
-          <div className="absolute top-0 left-0 right-0 bg-foreground/10 backdrop-blur-sm py-3 px-6 z-10">
+          
+          {/* <div className="absolute top-0 left-0 right-0 bg-foreground/10 backdrop-blur-sm py-3 px-6 z-10">
             <h3 className="text-lg md:text-xl font-bold text-foreground text-center">
               AI Interview & Meeting Assistant
             </h3>
-          </div>
+          </div> */}
 
           {/* Feature tags */}
           <div className="absolute top-16 left-0 right-0 flex justify-center gap-4 z-10">
@@ -100,13 +100,26 @@ const Features = () => {
             ))}
           </div>
 
-          {/* Placeholder for video/image */}
-          <div className="w-full h-full bg-gradient-to-br from-secondary to-card flex items-center justify-center">
-            <div className="text-center p-8">
-              <Monitor className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-              <p className="text-muted-foreground">Interview Assistant Preview</p>
-            </div>
-          </div>
+          {/* Video Display */}
+          <video 
+            key={activeTab}
+            className="w-full h-full object-cover" 
+            autoPlay 
+            loop 
+            muted
+          >
+            <source 
+              src={
+                activeTab === "copilots" 
+                  ? "/src/assets/vdo1.mp4" 
+                  : activeTab === "career" 
+                  ? "/src/assets/vdo3.mp4"
+                  : "/src/assets/vdo2.mp4"
+              } 
+              type="video/mp4" 
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* Try It Now Button */}
