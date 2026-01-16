@@ -21,7 +21,7 @@ const Features = () => {
   ];
 
   return (
-    <SectionWrapper id="features" className="bg-card">
+    <SectionWrapper id="features">
       {/* Icon */}
       {/* <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -56,11 +56,10 @@ const Features = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-              activeTab === tab.id
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === tab.id
                 ? "bg-foreground text-background"
                 : "text-muted-foreground hover:text-foreground"
-            }`}
+              }`}
           >
             {tab.label}
           </button>
@@ -77,7 +76,7 @@ const Features = () => {
       >
         {/* Main Feature Card */}
         <div className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-card">
-          
+
           {/* <div className="absolute top-0 left-0 right-0 bg-foreground/10 backdrop-blur-sm py-3 px-6 z-10">
             <h3 className="text-lg md:text-xl font-bold text-foreground text-center">
               AI Interview & Meeting Assistant
@@ -101,22 +100,22 @@ const Features = () => {
           </div>
 
           {/* Video Display */}
-          <video 
+          <video
             key={activeTab}
-            className="w-full h-full object-cover" 
-            autoPlay 
-            loop 
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
             muted
           >
-            <source 
+            <source
               src={
-                activeTab === "copilots" 
-                  ? "/src/assets/vdo1.mp4" 
-                  : activeTab === "career" 
-                  ? "/src/assets/vdo3.mp4"
-                  : "/src/assets/vdo2.mp4"
-              } 
-              type="video/mp4" 
+                activeTab === "copilots"
+                  ? "/src/assets/vdo1.mp4"
+                  : activeTab === "career"
+                    ? "/src/assets/vdo3.mp4"
+                    : "/src/assets/vdo2.mp4"
+              }
+              type="video/mp4"
             />
             Your browser does not support the video tag.
           </video>

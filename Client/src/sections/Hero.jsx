@@ -4,7 +4,22 @@ import Button from "@/components/Button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 md:px-8 relative overflow-hidden bg-background">
+    <section className="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 md:px-8 relative overflow-hidden">
+      {/* Grid Background */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(94, 234, 212, 0.3) 1px, transparent 1px),
+                               linear-gradient(to bottom, rgba(94, 234, 212, 0.3) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px',
+          transform: 'perspective(1000px) rotateX(60deg)',
+          transformOrigin: 'center top',
+          maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, transparent 100%)'
+        }}
+      />
+
+      {/* Radial gradient overlay for smooth blending */}
+      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/50 pointer-events-none" />
       <div className="max-w-5xl mx-auto text-center relative z-10">
         {/* Badge */}
         <motion.div

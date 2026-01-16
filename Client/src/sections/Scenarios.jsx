@@ -7,47 +7,47 @@ const Scenarios = () => {
     {
       icon: Code,
       title: "System Design Interviews",
-      description: "Need an edge in system design interviews? RecruitIn AI Coding Copilot delivers real-time insights on architecture and scalability.",
+      description: "Real-time insights on architecture and scalability for system design excellence.",
     },
     {
       icon: Code,
       title: "Software Engineering Interviews",
-      description: "Lock in your software engineering offer with Coding Copilot's real-time coding guidance.",
+      description: "Real-time coding guidance to lock in your software engineering offer.",
     },
     {
       icon: Briefcase,
       title: "Project Management",
-      description: "Need to elevate your PM interview game? Unlock your potential with RecruitIn AI's real-time insights.",
+      description: "Unlock your potential with real-time PM interview insights.",
     },
     {
       icon: LineChart,
       title: "Financial Interviews",
-      description: "Nail your top finance interviews with RecruitIn AI's real-time insights on financial models, market trends, and investment strategies.",
+      description: "Master finance interviews with insights on models, trends, and strategies.",
     },
     {
       icon: DollarSign,
       title: "Market Sizing Interviews",
-      description: "Get ahead! Deliver a standout pitch to your top marketing job offer with RecruitIn AI.",
+      description: "Deliver standout pitches with data-driven marketing insights.",
     },
     {
       icon: PieChart,
       title: "Case Study Interviews",
-      description: "Get ready to impress! Master your case study interviews with RecruitIn AI's real-time feedback.",
+      description: "Master case studies with real-time feedback and analysis.",
     },
     {
       icon: Phone,
       title: "Sales Calls",
-      description: "Struggling to close deals? Our AI provides real-time sales insights and helps you respond to client questions with confidence and accuracy.",
+      description: "Close deals with real-time sales insights and confident responses.",
     },
     {
       icon: Users,
       title: "Consultation Sessions",
-      description: "Don't walk! Start delivering high-impact consultations with real-time insights and tailored solutions from RecruitIn AI.",
+      description: "Deliver high-impact consultations with tailored AI solutions.",
     },
     {
       icon: FileText,
       title: "Deep Dive",
-      description: "Enhance your interview games with RecruitIn AI's Co-Pilot features, including memory clearing, pausing, and autoscrolling.",
+      description: "Advanced Co-Pilot features including memory clearing and autoscrolling.",
     },
   ];
 
@@ -67,7 +67,7 @@ const Scenarios = () => {
   };
 
   return (
-    <SectionWrapper id="scenarios" className="bg-card">
+    <SectionWrapper id="scenarios">
       {/* Icon */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -96,25 +96,25 @@ const Scenarios = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
         {scenarios.map((scenario) => (
           <motion.div
             key={scenario.title}
             variants={itemVariants}
-            className="group relative rounded-2xl overflow-hidden border border-border bg-card hover-lift"
+            className="group relative rounded-xl overflow-hidden border border-border bg-card hover-lift"
           >
             {/* Image placeholder */}
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted flex items-center justify-center">
-              <scenario.icon className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+            <div className="h-32 bg-gradient-to-br from-secondary to-muted flex items-center justify-center">
+              <scenario.icon className="w-8 h-8 text-muted-foreground group-hover:text-foreground transition-colors" />
             </div>
 
             {/* Content */}
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-foreground mb-2">
+            <div className="p-3">
+              <h3 className="text-base font-bold text-foreground mb-1.5">
                 {scenario.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 {scenario.description}
               </p>
             </div>

@@ -10,7 +10,7 @@ import CTA from "@/sections/CTA";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navbar />
       <main>
         <Hero />

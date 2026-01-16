@@ -32,7 +32,7 @@ const FAQ = () => {
   };
 
   return (
-    <SectionWrapper id="faq" className="bg-card">
+    <SectionWrapper id="faq">
       {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -68,11 +68,10 @@ const FAQ = () => {
                 <li key={category.id}>
                   <button
                     onClick={() => setActiveCategory(category.id)}
-                    className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 ${
-                      activeCategory === category.id
+                    className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 ${activeCategory === category.id
                         ? "bg-foreground text-background"
                         : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                    }`}
+                      }`}
                   >
                     <span className="font-medium">{category.name}</span>
                     <span className="block text-xs opacity-70">{category.count} questions</span>
@@ -107,9 +106,8 @@ const FAQ = () => {
                 >
                   <span className="font-medium text-foreground">{item.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-muted-foreground transition-transform duration-200 ${
-                      openQuestion === item.id ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 text-muted-foreground transition-transform duration-200 ${openQuestion === item.id ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 <AnimatePresence>

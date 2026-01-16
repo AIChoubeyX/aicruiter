@@ -7,42 +7,42 @@ const WhyRecruitIn = () => {
   const features = [
     {
       icon: Globe,
-      category: "Speech Recognition",
+      category: "SPEECH RECOGNITION",
       title: "Multilingual",
       description: "Experience a lightning-fast 115 ms response time for natural, uninterrupted interviews—complete seamlessly in 42 languages with regional accent and dialect support, breaking down language barriers with AI-powered communication.",
       link: { text: "AI-driven localization", href: "#" },
     },
     {
       icon: Cpu,
-      category: "Premium AI",
+      category: "PREMIUM AI",
       title: "Advanced AI Models",
       description: "Powered by the latest and most capable models from Deepseek, Azure OpenAI, Google Gemini, Claude, and Grok—always updated to ensure top-tier reasoning, accuracy, and performance. Includes integrated WebSearch for real-time results. Far beyond the lightweight models used by most platforms.",
       link: { text: "AI-driven localization", href: "#" },
     },
     {
       icon: Users,
-      category: "Constant Innovation",
+      category: "CONSTANT INNOVATION",
       title: "Built by Users, for Users",
       description: "We improve fast because our users shape the product—every piece of feedback is valued by impact and implemented rapidly so you always get the best interview support possible. Join our Discord and submit your ideas and feature requests!",
       link: { text: "Powered by user insights", href: "#" },
     },
     {
       icon: Layers,
-      category: "Full Coverage",
+      category: "FULL COVERAGE",
       title: "Complete Career Ecosystem",
       description: "One platform for everything: build your resume, find and apply to jobs, ace your interviews, and tap into expert communities to excel at every stage.",
       link: { text: "Full ecosystem", href: "#" },
     },
     {
       icon: Smartphone,
-      category: "Mobile Optimized",
+      category: "MOBILE OPTIMIZED",
       title: "Practice Anywhere",
       description: "No app download needed – get real-time support in your live interview and conduct mock interviews anywhere, anytime with our mobile-optimized platform. start practicing interviews instantly from your phone's browser. Supported Browsers.",
       link: { text: "Mobile-first design", href: "#" },
     },
     {
       icon: Zap,
-      category: "Cutting-Edge Technology",
+      category: "CUTTING-EDGE TECHNOLOGY",
       title: "Dual-Layer AI Platform",
       description: "The first dual-layer platform offering both an AI Copilot and an AI Coach running simultaneously, delivering real-time insights and instant corrections.",
       link: { text: "Next-Gen Solution", href: "#" },
@@ -95,32 +95,32 @@ const WhyRecruitIn = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
       >
         {features.map((feature, index) => (
           <motion.div
             key={feature.title}
             variants={itemVariants}
-            className="p-6 rounded-2xl border border-border bg-card hover-lift hover-glow"
+            className="p-4 rounded-xl border border-border bg-card hover-lift hover-glow"
           >
             {/* Category */}
-            <span className="text-xs text-muted-foreground uppercase tracking-wider">
+            <span className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">
               {feature.category}
             </span>
 
             {/* Title */}
-            <h3 className="text-xl font-bold text-foreground mt-2 mb-4">
+            <h3 className="text-base font-bold text-foreground mt-2 mb-2">
               {feature.title}
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+            <p className="text-xs text-muted-foreground leading-relaxed mb-3">
               {feature.description}
             </p>
 
             {/* Icon Display - Last Item Special */}
             {index === 5 && (
-              <div className="flex gap-1 my-4">
+              <div className="flex gap-1 my-3">
                 {[...Array(12)].map((_, i) => (
                   <div
                     key={i}
@@ -134,9 +134,9 @@ const WhyRecruitIn = () => {
             {/* Link */}
             <a
               href={feature.link.href}
-              className="inline-flex items-center gap-1 text-sm text-foreground hover:text-muted-foreground transition-colors group"
+              className="inline-flex items-center gap-1 text-xs text-foreground hover:text-muted-foreground transition-colors group"
             >
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3 h-3" />
               <span>{feature.link.text}</span>
             </a>
           </motion.div>
